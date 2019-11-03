@@ -1,5 +1,8 @@
 #include "ImageEditor.h"
+#include <stdlib.h>
+#include<iostream>
 
+using namespace std;
 ImageEditor::ImageEditor()
 {
 	first = NULL;
@@ -159,13 +162,10 @@ void ImageEditor::addLayer()
 
 	if (active->next)
 	{
-		layer* cur;
-		cur = active;
-		active->next = novi;
+		active->next->prev = novi;
 		novi->prev = active;
-		novi->next = cur->next;
-		cur->next->prev = novi;
-		last->next = novi;
+		novi->next = active->next;
+		active->next = novi;
 		active = novi;
 	}
 	else
@@ -371,6 +371,7 @@ void ImageEditor::blur(int size)
 					}
 				}
 			}
+			if (k != 0)
 			active->cover[i][j]->ChangeCollor(sb / k, sg / k, sr / k); //dobija novu vrednost
 			k = 0;
 			sb = 0; sr = 0; sg = 0;
@@ -548,9 +549,12 @@ ImageEditor::~ImageEditor()
 		for (int i = 0; i < hight; i++)
 		{
 			for (int j = 0; j < width; j++)
+			
 			{
+				//cout << i << ' ' << j;
 				delete first->cover[i][j];
 			}
+			//cout << endl;
 			delete[] first->cover[i];
 		}
 		delete[] first->cover;

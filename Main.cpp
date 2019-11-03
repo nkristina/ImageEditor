@@ -1,4 +1,5 @@
 #include "ImageEditor.h"
+#include<iostream>
 using namespace std;
 
 // Broj testova je 12. Testovi su indeksirani brojevima 1 - 12. Test indeksiran brojem 0 je rezervisan za studentovo testiranje koda.
@@ -31,19 +32,31 @@ unsigned char* editImage(unsigned char* input) {
 		//imageEditor->invertColors();
 		//output = imageEditor->saveImage();
 		//imageEditor->flipVertical();
-		imageEditor->addLayer();
+		imageEditor->addLayer();//1
+	/*	imageEditor->fillRect(32, 32, 64, 64);
 		imageEditor->setActiveColor("#FFFF00");
 		imageEditor->fillRect(32, 32, 64, 64);
 		imageEditor->flipHorizontal();
-		imageEditor->addLayer();
-		imageEditor->setActiveColor("#AAFFFF");
-		imageEditor->fillRect(32, 32, 64, 64);
-		imageEditor->selectLayer(0);
+		imageEditor->flipVertical();
+		imageEditor->addLayer();//2
+		imageEditor->setActiveColor("#FFFF00");
+		imageEditor->fillRect(50, 50, 64, 64);
 		imageEditor->flipHorizontal();
-		imageEditor->selectLayer(3);
-		//imageEditor->invertColors();
-		imageEditor->blur(6);
+		imageEditor->addLayer();//3
+		imageEditor->setActiveColor("#AAFFFF");
+		imageEditor->fillRect(65, 65, 64, 64);*/
+		imageEditor->selectLayer(0);
+		cout << "proso select";
+		imageEditor->flipHorizontal();
+		imageEditor->selectLayer(0);
+		cout << "proso select 2";
+		imageEditor->invertColors();
+		imageEditor->blur(2);
+		cout << "blur";
 		imageEditor->crop(65, 65, 150, 150);
+
+		imageEditor->addLayer();//4
+		imageEditor->fillRect(50, 50, 64, 64);
 		output = imageEditor->saveImage();
 		break;
 	case 1:
