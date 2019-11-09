@@ -13,7 +13,7 @@ public:
 	bool loadImage(unsigned char* image);
 	unsigned char* saveImage();
 	void addLayer();
-	void deletLayer();
+	void deleteLayer();
 	void selectLayer(int i);
 	void setLayerOpacity(int i);
 	void invertColors();
@@ -25,6 +25,9 @@ public:
 	void setActiveColor(string hex);
 	void fillRect(int x, int y, int w, int h);
 	void eraseRect(int x, int y, int w, int h);
+	void deleteSelection();
+	void addLayerToSelection(int i);
+	void rotate(bool side);
 	~ImageEditor();
 
 private:

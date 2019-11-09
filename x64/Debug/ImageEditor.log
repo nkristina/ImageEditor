@@ -1,0 +1,10 @@
+﻿  ImageEditor.cpp
+D:\ETF 2\OOP\ImageEditor\ImageEditor\ImageEditor.cpp(126,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\ETF 2\OOP\ImageEditor\ImageEditor\ImageEditor.cpp(127,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\ETF 2\OOP\ImageEditor\ImageEditor\ImageEditor.cpp(128,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\ETF 2\OOP\ImageEditor\ImageEditor\ImageEditor.cpp(316,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Main.cpp
+  Piksel.cpp
+  Generating Code...
+D:\ETF 2\OOP\ImageEditor\ImageEditor\ImageEditor.cpp(335,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Test.obj : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'
