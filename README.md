@@ -12,3 +12,9 @@ ImageEditor is an object-oriented program written in C++. It is a class that all
  - Test.obj - file which converts bmp format to format used in ImageEditor
  - Pictures for testing and result pictures
  
+# Testing on your exampe
+If you want to test the code on your example, after you cloned the repo and made a project with: Test.obj, .cpp, .h files in it, you need to add your picture to the repo folder. It is important to name it "**MyExampe.bmp**".
+
+In min.cpp your example is under case 0. There you can choose what to do with your picture. 
+
+The ouptput will be called "MyExample_RESULT.bmp", and you can find it in repo folder.
