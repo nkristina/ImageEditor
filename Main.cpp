@@ -24,8 +24,9 @@ unsigned char* editImage(unsigned char* input) {
 	case 0:
 		// MyExample
 		/*
-			Mesto za proizvoljno testiranje koda.
-			Vrsi editovanje slike MyExample.bmp i stvara izlazni fajl MyExample_RESULT.bmp
+		Here you can test code on your image.
+		Name your example MyExample.bmp
+		Call functions you want for your example below and it will make MyExample_RESULT.bmp with choosen changes.
 		*/
 		imageEditor->loadImage(input);
 		//imageEditor->flipHorizontal();
@@ -46,13 +47,10 @@ unsigned char* editImage(unsigned char* input) {
 		imageEditor->setActiveColor("#AAFFFF");
 		imageEditor->fillRect(65, 65, 64, 64);*/
 		imageEditor->selectLayer(0);
-		cout << "proso select";
 		imageEditor->flipHorizontal();
 		imageEditor->selectLayer(0);
-		cout << "proso select 2";
 		imageEditor->invertColors();
 		imageEditor->blur(2);
-		cout << "blur";
 		imageEditor->crop(65, 65, 150, 150);
 
 		imageEditor->addLayer();//4
@@ -144,7 +142,8 @@ unsigned char* editImage(unsigned char* input) {
 
 int main() {
 
-	// Ova for petlja ce da pokrene sve testove [0 - 12]. Modifikujte uslov za 'if' da biste pokretali samo odredjene testove (npr: if(testNumber == 1 || testNumber == 5)).
+	// This loop is calling all tests one by one. To choose concrete test select a test number (for exp. if(testNumber == 1 || testNumber == 5)).
+	// Your example is in test 0.
 	for(testNumber = 0; testNumber <= numberOfTests; testNumber++)
 		if(testNumber == testNumber) test();
 
